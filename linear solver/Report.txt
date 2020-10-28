@@ -1,0 +1,27 @@
+Report for Run test for Inverse Power Method
+Generated a random symmetric matrix by A = a'*a while a = randi(n,n), 
+perform IPM on it, compare the result with in built linear solvers and 
+see the relationship between iterations and ||mu - dominant||/||mu - subdominant|| 
+Parameters:
+
+n = 100
+m = 3000
+mu = 50
+e = 0.010000
+display = 3
+You can check initial vector x0 in workspace.
+
+n is the size of the matrix.
+m is the maximum iteration rounds.
+mu is y = (A - mu*I)^(-1) * x in each iteration.
+e is the allowed error
+ERR = || |x_(k+1) - x_(k)| ||_infty in each iteration
+
+Parameters can be changed as variables in the workspace
+The eigenvalue nearest 50.00 is:
+44.6833
+Using eig() function, the nearest 3 eigenvalues to 50.0 are:
+44.6756 6.6442 118.6226 
+The iteration rounds is:
+5
+||mu - dominant||/||mu - subdominant|| = 0.12281
